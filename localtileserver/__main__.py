@@ -16,7 +16,7 @@ from localtileserver.tileserver.data import get_pine_gulch_url
 @click.option("-d", "--debug", default=False)
 @click.option("-b", "--browser", default=True)
 @click.option("-t", "--cesium-token", default="")
-@click.option("-c", "--cors-all", default=False)
+@click.option("-c", "--cors-all", default=True)
 def run_app(
     filename,
     port: int = 0,
@@ -24,7 +24,7 @@ def run_app(
     browser: bool = True,
     cesium_token: str = "",
     host: str = "127.0.0.1",
-    cors_all: bool = False,
+    cors_all: bool = True,
 ):
     """Serve tiles from the raster at `filename`.
 
